@@ -1,4 +1,5 @@
-# Customer Bookings Prediction - A Deep Learning based approach
+## Customer Bookings Prediction
+### A Deep Learning based approach to predict the customer bookings.
 #### By Arunava Kumar Chakraborty
 Please follow the following steps to run the application on the local server.
 
