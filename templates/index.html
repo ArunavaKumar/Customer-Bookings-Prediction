@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Bookings Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Customer Bookings Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Age" style = "font-size: 12px;" placeholder="Age" required="required" />
+      <input type="text" name="DaysSinceCreation" style = "font-size: 12px;" placeholder="DaysSinceCreation" required="required" />
+		  <input type="text" name="AverageLeadTime" style = "font-size: 12px;" placeholder="AverageLeadTime" required="required" />
+      <br>
+      <br>
+      <input type="text" name="LodgingRevenue" style = "font-size: 12px;" placeholder="LodgingRevenue" required="required" />
+      <input type="text" name="OtherRevenue" style = "font-size: 12px;" placeholder="OtherRevenue" required="required" />
+      <input type="text" name="PersonsNights" style = "font-size: 12px;" placeholder="PersonsNights" required="required" />
+      <br>
+      <br>
+      <input type="text" name="RoomNights" style = "font-size: 12px;" placeholder="RoomNights" required="required" />
+		  <input type="text" name="DaysSinceLastStay" style = "font-size: 12px;" placeholder="DaysSinceLastStay" required="required" />
+      <input type="text" name="DaysSinceFirstStay" style = "font-size: 12px;" placeholder="DaysSinceFirstStay" required="required" />
+      <br>
+      <br>
+      <br>
+      <button type="submit" class="btn btn-primary btn-block btn-large" style="background-color: rgb(125, 187, 125);
+                                                                               color: White;
+                                                                               font-weight: bold;
+                                                                               font-size: 14px;
+                                                                               border-radius: 10px;
+                                                                               border-style: none;">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
